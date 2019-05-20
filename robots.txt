@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: 
+Allow: /http://maxstechandmathsite.azurewebsites.net/math
+Allow: /http://maxstechandmathsite.azurewebsites.net/
+Allow: /http://maxstechandmathsite.azurewebsites.net/technology
+Allow: /http://maxstechandmathsite.azurewebsites.net/science
+Allow: /http://maxstechandmathsite.azurewebsites.net/Contact
+Allow: /http://maxstechandmathsite.azurewebsites.net/About
+Allow: /http://maxstechandmathsite.azurewebsites.net/Registration
+Allow: /http://maxstechandmathsite.azurewebsites.net/Default
+Allow: /http://maxstechandmathsite.azurewebsites.net/Home
+
+Sitemap: https://maxstechandmathsite.azurewebsites.net/sitemap.xml

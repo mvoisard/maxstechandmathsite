@@ -1,0 +1,317 @@
+{
+  "author": "Max Voisard",
+  "publisher": "Max Voisard",
+  "manifest_version": 2,
+  "version": "0.1",
+  "version_name": "0.1 beta",
+  "description": "The web app manifest for this website's extension that edits the browser's theming and settings.",
+  "default_locale": "en",
+  "lang": "en-US",
+  "name": "Browser and Theming Info/Settings",
+  "short_name": "Browser and Theming",
+  "id": "Max-Extension",
+  "background_color": "#00ff00",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "orientation": "landscape-primary",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "start_url": "Random.aspx",
+  "theme_color": "aliceblue",
+  "background": {
+    "persistent": false,
+    "scripts": [ "Scripts/browser-polyfill.js", "Scripts/Background.js" ],
+    "page": "html/Background.html"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "Wrench.png",
+    "default_title": "Tools",
+    "default_popup": "html/DefaultPopup.html",
+    "theme_icons": [
+      {
+        "light": "Images/light-16.png",
+        "dark": "Images/dark-16.png",
+        "size": "16"
+      },
+      {
+        "light": "Images/light-32.png",
+        "dark": "Images/dark-32.png",
+        "size": "32"
+      },
+      {
+        "light": "Images/light-64.png",
+        "dark": "Images/dark-64.png",
+        "size": "64"
+      }
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{25410db0-2219-49c9-91ac-59ce9c37f762}"
+    },
+    "edge": {
+      "browser_action_next_to_addressbar": true
+    }
+  },
+  "chrome_settings_overrides": {
+    "homepage": "http://www.yahoo.com",
+    "search_provider": {
+      "name": "DefaultSearch",
+      "keyword": "My Extension",
+      "is_default": true,
+      "search_url": "https://www.google.co.in/search?q={searchTerms}",
+      "favicon_url": "https://www.google.co.in/favicon.ico",
+      "search_url_post_params": "search_lang=google.co.in",
+      "suggest_url_post_params": "suggest_lang=google.co.in",
+      "instant_url_post_params": "instant_lang=google.co.in",
+      "image_url_post_params": "image_lang=google.co.in",
+      "alternate_urls": [
+        "https://www.google.com/?q={searchTerms}",
+        "https://search.yahoo.com/?q={searchTerms}"
+      ],
+      "prepopulated_id": 445
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "html/DefaultPopup.html"
+  },
+  "commands": {
+    "toggle-feature-foo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "windows": "Ctrl+Shift+Y",
+        "chromeos": "Alt+Shift+Y",
+        "mac": "Command+Shift+Y",
+        "linux": "Ctrl+Shift+U",
+        "android": "Shift+A",
+        "ios": "Shift+I"
+      },
+      "description": "Send a 'toggle-feature' event"
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+B",
+        "mac": "Command+Shift+B",
+        "chromeos": "Ctrl+Shift+F",
+        "linux": "Ctrl+Shift+J"
+      }
+    },
+    "_execute_page_action": {
+      "suggested_key": {
+        "default": "Ctrl+E",
+        "windows": "Alt+P",
+        "mac": "Option+P"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://maxstechandmathsite.azurewebsites.net/*" ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "css": [ "Stylesheet.css", "Stylesheet2.css", "Stylesheet3.css", "Stylesheet4.css", "Stylesheet5.css", "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" ],
+      "js": [
+        "Scripts/browser-polyfill.js",
+        "Scripts/content-script.js",
+        "http://ff.kis.v2.scr.kaspersky-labs.com/9F429392-D65E-C44E-9897-24E0F4769B9F/main.js",
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js",
+        "https://code.jquery.com/jquery-2.2.3.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+  "developer": {
+    "name": "Max Voisard",
+    "url": "https://www.linkedin.com/in/max-voisard-906873130"
+  },
+  "devtools_page": "html/devtools.html",
+  "homepage_url": "Random.aspx",
+  "icons": [
+    {
+      "src": "Images/android-icon-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": "0.75"
+    },
+    {
+      "src": "Images/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "density": "1.0"
+    },
+    {
+      "src": "Images/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": "1.5"
+    },
+    {
+      "src": "Images/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": "2.0"
+    },
+    {
+      "src": "Images/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": "3.0"
+    },
+    {
+      "src": "Images/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0"
+    }
+  ],
+  "icognito": "spanning",
+  "offline_enabled": true,
+  "omnibox": {
+    "keyword": "education"
+  },
+  "optional_permissions": [
+    "activeTab",
+    "background",
+    "bookmarks",
+    "browserSettings",
+    "clipboardRead",
+    "clipboardWrite",
+    "contentSettings",
+    "contextMenus",
+    "cookies",
+    "debugger",
+    "downloads",
+    "downloads.open",
+    "find",
+    "geolocation",
+    "history",
+    "idle",
+    "management",
+    "notifications",
+    "pageCapture",
+    "tabHide",
+    "tabs",
+    "topSites",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "options_page": "html/options.html",
+  "options_ui": {
+    "page": "html/options.html"
+  },
+  "page_action": {
+    "browser_style": true,
+    "default_icon": "RSS.png",
+    "default_title": "RSS feeds",
+    "default_popup": "html/DefaultPopup.html"
+  },
+  "permissions": [
+    "*://maxstechandmathsite.azurewebsites.net/*",
+    "activeTab",
+    "alarms",
+    "background",
+    "bookmarks",
+    "browserSettings",
+    "browsingData",
+    "contentSettings",
+    "contextMenus",
+    "contextualIdentities",
+    "cookies",
+    "debugger",
+    "dns",
+    "downloads",
+    "downloads.open",
+    "find",
+    "geolocation",
+    "history",
+    "identity",
+    "idle",
+    "management",
+    "menus",
+    "nativeMessaging",
+    "notifications",
+    "pageCapture",
+    "pkcs11",
+    "privacy",
+    "proxy",
+    "search",
+    "sessions",
+    "storage",
+    "tabHide",
+    "tabs",
+    "theme",
+    "topSites",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "sidebar_action": {
+    "default_icon": {
+      "16": "Images/Pin.png",
+      "32": "Images/MagnifyingGlass.png"
+    },
+    "default_title": "FileSystem",
+    "default_panel": "terminal.html",
+    "open_at_install": true
+  },
+  "theme": {
+    "images": {
+      "headerURL": "Images/Logo.PNG",
+      "theme_frame": "Images/Logo.PNG",
+      "additional_backgrounds": [ "left.png", "middle.png", "right.png" ]
+    },
+    "properties": {
+      "additional_backgrounds_alignment": [ "left", "center", "right" ],
+      "additional_backgrounds_tiling": [ "repeat" ]
+    },
+    "colors": {
+      "accentcolor": "#00ccff",
+      "textcolor": "#0000ff",
+      "tab_background_separator": "#00ff00",
+      "tab_line": "#ffff00",
+      "tab_loading": "#006600",
+      "tab_selected": "ff0000",
+      "tab_text": "#006600",
+      "button_background_active": "#0000ff",
+      "button_background_hover": "#0099ff",
+      "icons": "#003300",
+      "icons_attention": "#00ff00",
+      "ntp_background": "#6600cc",
+      "ntp_text": "ffffff",
+      "popup": "#66ff33",
+      "popup_border": "ff0000",
+      "popup_highlight": "#000000",
+      "popup_highlight_text": "#ff0000",
+      "popup_text": "#0000ff",
+      "sidebar": "#ff6600",
+      "sidebar_highlight": "#990099",
+      "sidebar_highlight_text": "#ffff00",
+      "sidebar_text": "#0000ff",
+      "sidebar_border": "ff0000",
+      "toolbar": "#ff9933",
+      "toolbar_text": "cyan",
+      "toolbar_field": "orange",
+      "toolbar_field_border": "white",
+      "toolbar_field_text": "green",
+      "toolbar_top_separator": "red",
+      "toolbar_bottom_separator": "blue",
+      "toolbar_vertical_separator": "yellow"
+    }
+  },
+  "web_accessible_resources": [
+    "Images/Logo.png",
+    "Styles/Stylesheet.css",
+    "Styles/Stylesheet2.css",
+    "Styles/Stylesheet3.css",
+    "Styles/Stylesheet4.css",
+    "Styles/Stylesheet5.css",
+    "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
+    "Scripts/browser-polyfill.js",
+    "Scripts/content-script.js",
+    "http://ff.kis.v2.scr.kaspersky-labs.com/9F429392-D65E-C44E-9897-24E0F4769B9F/main.js",
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js",
+    "https://code.jquery.com/jquery-2.2.3.js"
+  ]
+}

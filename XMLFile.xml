@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Images/MathAd1.jpg</ImageUrl>
+    <AlternateText>WyzAnt</AlternateText>
+    <NavigateUrl>https://www.wyzant.com</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/TechAd1.jpg</ImageUrl>
+    <AlternateText>Fox Machine Co.</AlternateText>
+    <NavigateUrl>http://www.vintagemachinery.org/mfgindex/detail.aspx?id=324</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/MathAd2.jpg</ImageUrl>
+    <AlternateText>Cool Math Games</AlternateText>
+    <NavigateUrl>http://www.coolmath-games.com</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/TechAd2.jpg</ImageUrl>
+    <AlternateText>Ganesh Machinery</AlternateText>
+    <NavigateUrl>http://ganeshmachinery.com/</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/MathAd3.jpg</ImageUrl>
+    <AlternateText>Math Is Fun</AlternateText>
+    <NavigateUrl>https://www.mathsisfun.com/</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/TechAd3.jpg</ImageUrl>
+    <AlternateText>Caterpillar</AlternateText>
+    <NavigateUrl>https://www.caterpillar.com/</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/MathAd4.jpg</ImageUrl>
+    <AlternateText>Khan Academy</AlternateText>
+    <NavigateUrl>https://www.khanacademy.org</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/TechAd4.jpg</ImageUrl>
+    <AlternateText>Caterpillar</AlternateText>
+    <NavigateUrl>http://www.buffalotech.com/</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/Physics.jpg</ImageUrl>
+    <AlternateText>Rutgers Physics book</AlternateText>
+    <NavigateUrl>https://www.rutgersuniversitypress.org/</NavigateUrl>
+    <Width>240</Width>
+  </Ad>
+</Advertisements>
