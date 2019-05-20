@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        browser.devtools.panels.create(
+            "My Panel",                      // title
+            "icons/star.png",                // icon
+            "devtools/panel/panel.html"      // content
+        ).then((newPanel) => {
+            newPanel.onShown.addListener(initialisePanel);
+            newPanel.onHidden.addListener(unInitialisePanel);
+        });
+    </script>
+</body>
+</html>
