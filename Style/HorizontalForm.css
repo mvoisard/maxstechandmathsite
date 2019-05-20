@@ -1,0 +1,522 @@
+@import url(http://fonts.googleapis.com/css?family=Laila:400,700);
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0 auto;
+  text-align: center;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { overflow-y: scroll; 
+       overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  background: #e2eef4;
+  font-size: 62.5%;
+  line-height: 1;
+  padding-top: 40px;
+}
+
+.red { color: red }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  outline: none; 
+}
+
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+h1 {
+  display: block;
+  font-size: 3.1em;
+  line-height: 1.45em;
+  font-family: 'Laila', serif;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+  background-color: #ebf442;
+}
+
+/** form field **/
+form {
+  display: block;
+  margin: 0px 30px 0px 30px;
+  overflow: hidden;
+  background: #ebf442;
+  border: 3px solid #7eaf4a;
+  border-radius: 5px;
+  font-size: 0;
+}
+
+div > label {
+  display: block;
+  padding: 20px 20px 10px;
+  vertical-align: top;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #939393;
+  cursor: pointer;
+}
+
+div.switch > label {
+  padding: 22px 20px 18px;
+}
+
+.col-3, .col-4 { 
+  border-bottom: 1px solid #7eaf4a;
+  border-right: 1px solid #7eaf4a;
+  background-color: #ebf442;
+  vertical-align: top;
+  min-height: 100px;
+}
+
+label > input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  margin: 5px -5px 0;
+  padding: 7px 5px 3px;
+  border: none;
+  outline: none;
+  color: #555;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: .6;
+  transition: all linear .3s;
+}
+
+label > select {
+    display: block;
+    width: 100%;
+    padding: 7px 5px 3px;
+    margin: 5px -5px 0;
+    color: #555;
+    font-weight: 500;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    opacity: .6;
+    transition: all linear .3s;
+}
+
+label > input:focus, label > select:focus {
+  opacity: 1;
+}
+
+/** button design based on http://codepen.io/guvootes/pen/eyDAb **/
+
+#LoginSection {
+    background-color: #e4e4e4;
+    display: block;
+    padding-bottom: 10px;
+}
+
+footer {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFFFFF;
+    margin-top: 0px;
+}
+
+.myButton {
+    -moz-box-shadow: inset 0px 1px 0px 0px #e184f3;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #e184f3;
+    box-shadow: inset 0px 1px 0px 0px #e184f3;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c123de), color-stop(1, #a20dbd));
+    background: -moz-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: -webkit-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: -o-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: -ms-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c123de', endColorstr='#a20dbd',GradientType=0);
+    background-color: #c123de;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #a511c0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #9b14b3;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+    .myButton:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c123de));
+        background: -moz-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+        background: -webkit-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+        background: -o-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+        background: -ms-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+        background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c123de',GradientType=0);
+        background-color: #a20dbd;
+    }
+
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
+
+.myButton3 {
+    -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+    background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+    background-color: #d0451b;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #942911;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+    margin-top: 5px;
+}
+
+    .myButton3:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+        background: -moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+        background-color: #bc3315;
+    }
+
+    .myButton3:active {
+        position: relative;
+        top: 1px;
+    }
+
+#divPopUp {
+    background: #1a87c5;
+    animation: bgcolors 60s linear infinite;
+}
+
+.loader {
+    width: 38px;
+    height: 38px;
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+    stroke-width: 4;
+    fill: none;
+    display: none;
+    visibility: hidden;
+}
+
+.internal-circle, .external-circle {
+    stroke: #fff;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+}
+
+.internal-circle {
+    stroke-dasharray: 187;
+    animation: internal 1s ease-in-out infinite;
+    opacity: .4;
+}
+
+.external-circle {
+    stroke-dasharray: 312;
+    animation: external 1s linear infinite;
+    opacity: .9;
+}
+
+@keyframes internal {
+    0% {
+        stroke-dashoffset: 187;
+    }
+
+    25% {
+        stroke-dashoffset: 80;
+    }
+
+    100% {
+        stroke-dashoffset: 187;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes external {
+    0% {
+        stroke-dashoffset: 312;
+        transform: rotate(70deg);
+    }
+
+    60% {
+        stroke-dashoffset: -312;
+    }
+
+    100% {
+        stroke-dashoffset: -312;
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes bgcolors {
+    0% {
+        background: #1a87c5;
+    }
+
+    25% {
+        background: #c51a3a;
+    }
+
+    50% {
+        background: #e6d121;
+    }
+
+    75% {
+        background: #22cf76;
+    }
+
+    100% {
+        background: #1a87c5;
+    }
+}
+
+@keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.isa_success, .isa_error {
+    margin: 10px 0px;
+    padding: 12px;
+    font-size: 2em;
+}
+
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+    .isa_success i, .isa_error i {
+        margin: 10px 22px;
+        font-size: 2em;
+        vertical-align: middle;
+    }
+
+@-moz-keyframes bounceDown {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounceDown {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounceDown {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+#DownArrow {
+    -moz-animation: bounceDown 2s infinite;
+    -webkit-animation: bounceDown 2s infinite;
+    animation: bounceDown 2s infinite;
+    text-align: center;
+    background-color: #ebf442;
+    display: block;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 110%;
+    }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media(min-width: 850px) {
+    form > div {
+        display: inline-block;
+    }
+
+    .col-submit {
+        display: block;
+    }
+
+    .col-2, .col-3, .col-4 {
+        box-shadow: 1px 1px #7eaf4a;
+        border-bottom: 1px solid #7eaf4a;
+        border-right: 1px solid #7eaf4a;
+    }
+
+    .col-2 {
+        width: 50%
+    }
+
+    .col-3 {
+        width: 33.3333333333%
+    }
+
+    .col-4 {
+        width: 25%
+    }
+
+    .col-submit button {
+        width: 30%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .col-4 {
+        width: 100%;
+    }
+}

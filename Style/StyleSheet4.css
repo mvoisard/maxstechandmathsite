@@ -1,0 +1,820 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+}
+
+main {
+    font-size: 1.5em;
+    width: 88.5%;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+#Header {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    font-size: 60px;
+    font-family: Calibri, Verdana, Sans-Serif;
+    text-align: center;
+    padding-top: 40px;
+    position: relative;
+}
+
+table {
+    margin: auto;
+    border: 1px solid #3F2860;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+    border: 3px solid #3F2860;
+}
+
+#Bowling th:nth-child(odd) {
+    background-color: #ff3333;
+}
+
+#Bowling th:nth-child(even) {
+    background-color: #3366ff;
+}
+
+#myInput {
+    background-image: url(/Images/search-icon-2.png);
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    width: 50%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 3px solid green;
+}
+
+#Downloads {
+    width: 100%;
+    margin-right: 10%;
+}
+
+    #Downloads th {
+        background-color: orange;
+    }
+
+    #Downloads tr:nth-child(odd) {
+        background-color: yellow;
+    }
+
+    #Downloads tr:nth-child(even) {
+        background-color: orange;
+    }
+
+table.depreciation th:nth-child(odd) {
+    background-color: greenyellow;
+}
+
+table.depreciation th:nth-child(even) {
+    background-color: red;
+}
+
+table.depreciation td:nth-child(odd) {
+    background-color: greenyellow;
+}
+
+table.depreciation td:nth-child(even) {
+    background-color: red;
+}
+
+.text-box, .text-box2, .close-icon, .search-wrapper {
+    position: relative;
+    padding: 10px;
+}
+
+.text-box {
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 15px;
+}
+
+    .text-box:focus {
+        box-shadow: 0 0 15px 5px #b0e0ee;
+        border: 2px solid #bebede;
+    }
+
+.text-box2 {
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 20px;
+}
+
+    .text-box2:focus {
+        box-shadow: 0 0 15px 5px purple;
+        border: 2px solid purple;
+    }
+
+.close-icon {
+    border: 1px solid transparent;
+    background-color: transparent;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
+
+    .close-icon:after {
+        content: "X";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: #FA9595;
+        z-index: 1;
+        right: 35px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 2px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        font-weight: normal;
+        font-size: 12px;
+        box-shadow: 0 0 2px #E50F0F;
+        cursor: pointer;
+    }
+
+.text-box:not(:valid) ~ .close-icon {
+    display: none;
+}
+
+.text-box2:not(:valid) ~ .close-icon {
+    display: none;
+}
+
+u {
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+}
+
+#lowZ {
+    position: relative;
+    z-index: 0;
+}
+
+#sidebar {
+    font-size: 1.2em;
+    font-weight: 900;
+    float: right;
+    width: 12%;
+    padding: 20px 5px 0px 20px;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #4cff00;
+    transition: 0.5s;
+    overflow: auto;
+}
+
+#TextArea1 {
+    width: 765px;
+    height: 346px;
+}
+
+#div1 {
+    width: 500px;
+    height: 70px;
+    padding: 10px;
+    border: 3px solid green;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 1200px;
+    max-width: 1480px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.auto-style1 {
+    width: 92px;
+    height: 21px;
+}
+
+.auto-style2 {
+    width: 92px;
+    height: 44px;
+}
+
+.modal-header {
+    background: #eee;
+    padding: 15px;
+    color: #000;
+}
+
+    .modal-header h2 {
+        position: absolute;
+        right: 46%;
+    }
+
+.close-btn {
+    color: #ff0000;
+    float: right;
+    font-size: 30px;
+}
+
+    .close-btn:hover, .close-btn:focus {
+        color: #ff4d4d;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-body {
+    padding: 10px 20px;
+}
+
+.modal-footer {
+    background: #eee;
+    padding: 10px;
+    color: #000;
+    text-align: center;
+}
+
+    .modal-footer h3 {
+        margin: 0;
+    }
+
+@keyframes modalopen {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#search_result {
+    position: absolute;
+    top: 62px;
+    left: 594px;
+    border: 1px solid #111;
+    padding: 1em 7.7em;
+    display: none;
+}
+
+.autocomplete {
+    background: #fff;
+    position: relative;
+}
+
+    .autocomplete .close {
+        position: absolute;
+        font-size: 13px;
+        z-index: 10;
+        top: 17px;
+        left: calc(100% - 50px);
+        color: #000;
+        cursor: pointer;
+        display: none;
+    }
+
+        .autocomplete .close.visible {
+            display: block;
+        }
+
+.dialog {
+    width: 51%;
+    display: none;
+    min-height: 40px;
+    max-height: 329px;
+    overflow: scroll;
+    border-top: 1px solid #f4f4f4;
+    z-index: 12 !important;
+    margin: 6px 145px;
+    position: absolute;
+}
+
+    .dialog.open {
+        display: block;
+        background: #FFF;
+        z-index: 11 !important;
+        color: black;
+    }
+
+    .dialog div {
+        padding: 20px 10px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: absolute;
+        left: 93px;
+        width: 100%;
+        height: 100%;
+    }
+
+.vertical-date {
+    list-style: none;
+    padding: 1em;
+    text-align: left;
+    border-bottom: 2px solid #000;
+}
+
+.list-daynumber {
+    line-height: .5em;
+    font-size: 46px;
+    font-weight: 800;
+    opacity: 0.9;
+}
+
+.list-monthname {
+    font-size: 32px;
+    opacity: 0.6;
+    border-bottom: 5px solid #FF4D55;
+    width: 59px;
+}
+
+.duration {
+    display: block;
+    color: #908383;
+    font-weight: 600;
+    margin-top: 0.8em;
+}
+
+
+.s_title {
+    color: #ed8392;
+    font-size: 1.3em;
+    margin: -13px 34px;
+    position: absolute;
+    font-weight: 900;
+}
+
+.s_des {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.myButton {
+    -moz-box-shadow: inset 0px 1px 0px 0px #e184f3;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #e184f3;
+    box-shadow: inset 0px 1px 0px 0px #e184f3;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c123de), color-stop(1, #a20dbd));
+    background: -moz-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: -webkit-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: -o-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: -ms-linear-gradient(top, #c123de 5%, #a20dbd 100%);
+    background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c123de', endColorstr='#a20dbd',GradientType=0);
+    background-color: #c123de;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #a511c0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #9b14b3;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.myButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c123de));
+    background: -moz-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+    background: -webkit-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+    background: -o-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+    background: -ms-linear-gradient(top, #a20dbd 5%, #c123de 100%);
+    background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c123de',GradientType=0);
+    background-color: #a20dbd;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.box2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#top-ad {
+    width: 728px;
+    margin: 20px auto 10px auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.6s;
+    animation-name: fadeIn;
+    animation-duration: 0.6s
+}
+
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(to bottom, #ffff00 0%, #cc6600 100%);
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.6s;
+    animation-name: slideIn;
+    animation-duration: 0.6s
+}
+
+/* The Close Button */
+.close {
+    background-color: #ff0000;
+    color: #bc3315;
+    float: right;
+    font-size: 28px;
+}
+
+    .close:hover,
+    .close:focus {
+        background-color: #ff0066;
+        color: #ff0000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-header {
+    background-color: #63b8ee;
+    color: white;
+    height: 57px;
+}
+
+.modal-body {
+    padding: 5px 20px;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-item-red {
+    background: tomato;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 31%;
+}
+
+.flex-item-green {
+    background: green;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 31%;
+}
+
+.flex-item-blue {
+    background: blue;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 31%;
+}
+
+.flex-item-orange {
+    background: orange;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 31%;
+}
+
+.flex-item-purple {
+    background: violet;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 31%;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+u {
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+}
+
+.myButton2 {
+    -moz-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+    box-shadow: inset 0px 1px 0px 0px #bee2f9;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf));
+    background: -moz-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background: -webkit-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background: -o-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background: -ms-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf',GradientType=0);
+    background-color: #63b8ee;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #3866a3;
+    display: inline-block;
+    cursor: pointer;
+    color: #14396a;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #7cacde;
+    margin-top: 5px;
+}
+
+    .myButton2:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee));
+        background: -moz-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+        background: -webkit-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+        background: -o-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+        background: -ms-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+        background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee',GradientType=0);
+        background-color: #468ccf;
+    }
+
+    .myButton2:active {
+        position: relative;
+        top: 1px;
+    }
+
+.myButton3 {
+    -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+    background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+    background-color: #d0451b;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #942911;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+    margin-top: 5px;
+}
+
+    .myButton3:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+        background: -moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+        background-color: #bc3315;
+    }
+
+    .myButton3:active {
+        position: relative;
+        top: 1px;
+    }
+
+.button {
+    background: #005f95;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bolder;
+    letter-spacing: 0.02em;
+    padding: 10px 20px;
+    text-align: center;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: #4499c9;
+}
+
+.btn:active {
+    background: #49ADE5;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#file-drag {
+    border: 2px dashed #555;
+    border-radius: 7px;
+    color: #555;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    margin: 1em 0;
+    padding: 3em;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+}
+
+    #file-drag:hover {
+        background: #ddd;
+    }
+
+    #file-drag:hover,
+    #file-drag.hover {
+        border-color: #3070A5;
+        border-style: solid;
+        box-shadow: inset 0 3px 4px #888;
+        color: #3070A5;
+    }
+
+#file-progress {
+    display: none;
+    margin: 1em auto;
+    width: 100%;
+}
+
+#file-upload-btn {
+    margin: auto;
+}
+
+    #file-upload-btn:hover {
+        background: #4499c9;
+    }
+
+#file-upload-form {
+    margin: auto;
+    width: 40%;
+}
+
+progress {
+    appearance: none;
+    background: #eee;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    height: 30px;
+}
+
+    progress[value]::-webkit-progress-value {
+        background: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .2) 33%, rgba(0,0, 0, .2) 66%, transparent 66%), -webkit-linear-gradient(right, #005f95, #07294d);
+        background: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .2) 33%, rgba(0,0, 0, .2) 66%, transparent 66%), linear-gradient(right, #005f95, #07294d);
+        background-size: 60px 30px, 100% 100%, 100% 100%;
+        border-radius: 3px;
+    }
+
+    progress[value]::-moz-progress-bar {
+        background: -moz-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .2) 33%, rgba(0,0, 0, .2) 66%, transparent 66%), -moz-linear-gradient(right, #005f95, #07294d);
+        background: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .2) 33%, rgba(0,0, 0, .2) 66%, transparent 66%), linear-gradient(right, #005f95, #07294d);
+        background-size: 60px 30px, 100% 100%, 100% 100%;
+        border-radius: 3px;
+    }
+
+.buttonload {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    font-size: 20px; /* Set a font size */
+    height: 38px;
+    width: 135px;
+    display: none;
+    visibility: hidden;
+    cursor: progress;
+}
+
+.progressBar {
+    width: 400px;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: #292929;
+    margin: 0 auto;
+    cursor: progress;
+}
+
+    .progressBar div {
+        height: 100%;
+        color: #fff;
+        text-align: right;
+        line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+        width: 0;
+        background-color: #0099ff;
+    }
+
+#BottomSection {
+    background: radial-gradient(ellipse at center, #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%);
+    position: relative;
+    z-index: 0;
+    text-align: center;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -28px;
+    margin-top: -34px;
+    position: relative;
+    z-index: 2;
+}
