@@ -3883,7 +3883,6 @@ namespace WebApplication6
                 List<string> files = new List<string>();
                 string url = TextBox13.Text;
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create(url);
-                request.Credentials = new NetworkCredential(@"maxstechandmathsite\$maxstechandmathsite", "dhD4ehA5k1mkdnWlQeZZL5gzfF6Zyw1NffqApLyj5ipSsHJxrzKpsjitCm3h");
                 using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
                 {
                     using (StreamReader reader = new StreamReader(response.GetResponseStream()))
