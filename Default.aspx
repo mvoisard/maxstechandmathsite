@@ -9,7 +9,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-135557572-1', { 'optimize_id': 'GTM-WDKRBS3'});
+      gtag('config', 'CONFIG_ID', { 'optimize_id': 'OPTIMIZE_ID'});
     </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,7 +43,7 @@
     <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-8887116012216502",
+        google_ad_client: "MY_CLIENT_ID",
         enable_page_level_ads: true
       });
     </script>
@@ -172,7 +172,7 @@
             var initClient = function() {
                 gapi.load('auth2', function(){
                     auth2 = gapi.auth2.init({
-                        client_id: '639859509357-eommn88ku4hkk42li4eas0a8r4usf0s8.apps.googleusercontent.com',
+                        client_id: 'MY_CLIENT_ID',
                         cookiepolicy: 'single_host_origin',
                         scope: 'profile'
                     });
@@ -199,7 +199,7 @@
             if (called) return;
             called = true;
             FB.init({
-              appId      : '108355726669362',
+              appId      : 'MY_APP_ID',
               cookie     : true,
               xfbml      : true,
               scope      : 'public_profile,name,id,password,email,gender,user_birthday',
