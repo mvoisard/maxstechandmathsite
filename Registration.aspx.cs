@@ -40,7 +40,7 @@ namespace WebApplication6
         {
             var result = false;
             var captchaResponse = Request.Form["g-recaptcha-response"];
-            var secretKey = "6Le-Sk0UAAAAAJwb5_I5DCnR-pB6qREBG876rGkY";
+            var secretKey = "MY_RECAPTCHA_SECRET";
             var apiUrl = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
             var requestUri = string.Format(apiUrl, secretKey, captchaResponse);
             var request = (HttpWebRequest)WebRequest.Create(requestUri);
@@ -160,8 +160,8 @@ namespace WebApplication6
                                                 com.Dispose();
                                                 lblSuccessMessage.Visible = true;
                                                 lblSuccessMessage.InnerHtml = "<i class='fa fa-check'></i> Registration successful";
-                                                const string accountSid = "ACf8330fcc3ede57b663dbede2858535d0";
-                                                const string authToken = "5eb820b34245cef33060f9e34d0b61b9";
+                                                const string accountSid = "MY_ACCOUNT_SID";
+                                                const string authToken = "MY_AUTHORIZATION_TOKEN";
                                                 TwilioClient.Init(accountSid, authToken);
                                                 var message = MessageResource.Create(
                                                     body: "Thank you for registering to Max's Tech and Math Site! Your verification code is: " + randomNumber,
@@ -326,8 +326,8 @@ namespace WebApplication6
         protected void Button2_Click(object sender, EventArgs e)
         {
             randomNumber = number.Next(100000, 999999);
-            const string accountSid = "ACf8330fcc3ede57b663dbede2858535d0";
-            const string authToken = "5eb820b34245cef33060f9e34d0b61b9";
+            const string accountSid = "MY_ACCOUNT_SID";
+            const string authToken = "MY_AUTHORIZATION_TOKEN";
             TwilioClient.Init(accountSid, authToken);
             var phoneNum = phone.Value;
             Regex regexObj = new Regex(@"[^\d]");
